@@ -1,0 +1,16 @@
+.collapsible-body {
+    padding: 0;
+  }
+  
+.col {
+  padding: 0;
+}
+
+.titulo {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(241, 83, 55);
+  border-radius: 5px;
+}
+a{
+  color: #000;
+}
