@@ -7,7 +7,8 @@
 	<title>Efecto Texto Neon</title>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="css/estilos.css">
-	<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
 </head>
 <body>
 	<header class="contenido-encabezado" id="contenido-encabezado">
@@ -24,9 +25,10 @@
 			</h1>
 
 			<a href="#" class="btn-link texto-regular">Desliza</a>
+        
 		</div>
 	</header>
-
+   
 	<main>
 		<section class="contenedor">
 			<h2 class="subtitulo-h2">MENÚ</h2>
@@ -111,8 +113,23 @@
                 </li>
                 
             </ul>
-		</section>
+		</section><div class="fixed-action-btn">
+            <a class="btn-floating btn-large green modal-trigger" href="#modal1">
+                <i class="large material-icons">add_shopping_cart</i>
+            </a>  
+        </div>
 	</main>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Tu Orden</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="https://wa.me/524444894855" class="modal-close waves-effect waves-green btn-flat">Enviar Orden</a>
+        </div>
+    </div>
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -121,6 +138,8 @@
 		window.addEventListener('scroll', () => {
 			const header = document.getElementById('contenido-encabezado');
 			header.style.opacity = '1' - window.pageYOffset / 650;
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instance = M.FloatingActionButton.getInstance(elems)
 		});
 	</script>
 </body>
