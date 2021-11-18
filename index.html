@@ -44,18 +44,30 @@
                 <li>
                     <div class="collapsible-header">CERVEZA</div>
                     <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m7">
-                              <div class="card">
+                        <div class="row" data-bind="foreach: cerveza">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
                                 <div class="card-image">
-                                  <img src="img/six-modelo.jpg">
-                                  <span class="card-title blue-text text-darken-2">Six Modelo Vidrio</span>
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="300px">
+                                  <span class="card-title blue-text text-darken-2" data-bind="text:nombre"></span>
                                 </div>
                                 <div class="card-content">
-                                  <p><b>Precio:</b> $95.00</p>
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>
+                                    
                                 </div>
-                                <div class="card-action">
-                                  <a href="#">Añadir a Carrito</a>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
                                 </div>
                               </div>
                             </div>
@@ -123,17 +135,29 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Tu Orden</h4>
-            <p>A bunch of text</p>
+            <h4>Tu Orden</h4> <h6 data-bind="text: 'Total: $' + total" class="right-align"></h6>
+            <ul class="collection" data-bind="foreach: orden">
+                <li class="collection-item avatar">
+                  <img data-bind="attr: {src: 'img/'+ imagen}" alt="" class="circle">
+                  <span class="title" data-bind="text: nombre"></span>
+                  <p data-bind="text: 'cantidad: ' + cantidad"></p>
+                  <p data-bind="text: '$' + precio"></p>
+                  <a href="#!" class="secondary-content" data-bind="click: $parent.removeToCard"><i class="material-icons">close</i></a>
+                </li>
+            </ul>
         </div>
         <div class="modal-footer">
-            <a href="https://wa.me/524444894855" class="modal-close waves-effect waves-green btn-flat">Enviar Orden</a>
+            <a href="https://wa.me/524444894855" class="modal-close waves-effect waves-green btn">Enviar Orden</a>
         </div>
     </div>
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/knockout-es5.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="index.js"></script>
 	<script>
 		window.addEventListener('scroll', () => {
 			const header = document.getElementById('contenido-encabezado');
