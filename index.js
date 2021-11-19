@@ -79,12 +79,12 @@ function AppViewModel(){
     }
 
     this.confirmaOrden = () => {
-        this.mensaje = "Orden%20"
+        this.mensaje = "TUOrden%100"
         let modal_orden = M.Modal.getInstance(document.getElementById('modal1'))
         let modal_confirma = M.Modal.getInstance(document.getElementById('confirmacion'))
         modal_orden.close()
         for(m of this.orden){
-            this.mensaje += `${m.cantidad}-${m.nombre}%20`
+            this.mensaje += `_${m.cantidad}-${m.nombre}_%100`
         }
         this.mensaje += `Total: ${this.total}`
         modal_confirma.open()
