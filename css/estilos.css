@@ -159,9 +159,13 @@ main .letra-capital {
 
 .collapsible-body {
 	background-color: white;
+	padding: 0;
 }
 .card, .modal {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.leyenda {
+	font-size:small;
 }
 /*Boton neon*/
 .boton-neon {

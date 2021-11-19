@@ -29,7 +29,8 @@ function AppViewModel(){
     this.vodka = []
     this.ron = []
     this.orden = []
-    this.total = 0
+    this.total = 30
+    this.mensaje = ""
 
     this.cargaProductos = () => {
         for(c of cerveza)
@@ -46,6 +47,8 @@ function AppViewModel(){
             this.ron.push(new productos(r.nombre,r.disponible,r.precio,r.imagen,r.descripcion, r.cantidad))
         for(r of refrescos)
             this.refrescos.push(new productos(r.nombre, r.disponible, r.precio, r.imagen, r.descripcion, r.cantidad))
+
+        console.log(this.tequila)
     }
 
     this.addToCart = (producto) => {
@@ -73,6 +76,19 @@ function AppViewModel(){
     this.removeToCard = (producto) => {
         this.total -= producto.precio
         this.orden.remove(producto)
+    }
+
+    this.confirmaOrden = () => {
+        this.mensaje = "Orden%20"
+        let modal_orden = M.Modal.getInstance(document.getElementById('modal1'))
+        let modal_confirma = M.Modal.getInstance(document.getElementById('confirmacion'))
+        modal_orden.close()
+        for(m of this.orden){
+            this.mensaje += `${m.cantidad}-${m.nombre}%20`
+        }
+        this.mensaje += `Total: ${this.total}`
+        modal_confirma.open()
+        
     }
 
     function validaCantidad(valor){

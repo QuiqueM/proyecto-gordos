@@ -56,8 +56,74 @@
                             <div class="col s12 m6">
                               <div class="card z-depth-4">
                                 <div class="card-image">
-                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="300px">
-                                  <span class="card-title blue-text text-darken-2" data-bind="text:nombre"></span>
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
+                                </div>
+                                <div class="card-content">
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>  
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+                <!--seccion de Tequilas-->
+                <li>
+                    <div class="collapsible-header">TEQUILA</div>
+                    <div class="collapsible-body">
+                        <div class="row" data-bind="foreach: tequila">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
+                                <div class="card-image">
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
+                                </div>
+                                <div class="card-content">
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>    
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--seccion de Bandy-->
+                <li>
+                    <div class="collapsible-header">BRANDY</div>
+                    <div class="collapsible-body">
+                        <div class="row" data-bind="foreach: brandy">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
+                                <div class="card-image">
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
                                 </div>
                                 <div class="card-content">
                                     <span data-bind="text: descripcion"></span>
@@ -82,32 +148,72 @@
                           </div>
                     </div>
                 </li>
-                <!--seccion de Tequilas-->
-                <li>
-                    <div class="collapsible-header">TEQUILA</div>
-                    <div class="collapsible-body">
-                        
-                    </div>
-                </li>
-                <!--seccion de Bandy-->
-                <li>
-                    <div class="collapsible-header">BRANDY</div>
-                    <div class="collapsible-body">
-                        
-                    </div>
-                </li>
                 <!--senccion de Whisky-->
                 <li>
                     <div class="collapsible-header">WHISKY</div>
                     <div class="collapsible-body">
-                        
+                        <div class="row" data-bind="foreach: whisky">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
+                                <div class="card-image">
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
+                                </div>
+                                <div class="card-content">
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>
+                                    
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </li>
                 <!--seccion Ron-->
                 <li>
                     <div class="collapsible-header">RON</div>
                     <div class="collapsible-body">
-                        
+                        <div class="row" data-bind="foreach: ron">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
+                                <div class="card-image">
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
+                                </div>
+                                <div class="card-content">
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>
+                                    
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </li>
                 <!--seccion para Cigarros-->
@@ -121,7 +227,34 @@
                 <li>
                     <div class="collapsible-header">REFRESCOS y AGUAS</div>
                     <div class="collapsible-body">
-                        
+                        <div class="row" data-bind="foreach: refrescos">
+                            <div class="col s12 m6">
+                              <div class="card z-depth-4">
+                                <div class="card-image">
+                                  <img data-bind="attr: {src: 'img/'+ imagen}" height="250px" width="250px">
+                                  <span class="card-title deep-purple-text text-darken-2" data-bind="text:nombre"></span>
+                                </div>
+                                <div class="card-content">
+                                    <span data-bind="text: descripcion"></span>
+                                    <p>Precio:<span data-bind="text: '$ ' + precio"></span></p>
+                                    
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible">
+                                    <div class="row">
+                                        <div class="col s5 m5">
+                                            <input type="number" data-bind="value: cantidad">
+                                        </div>
+                                        <div class="col s4 m4">
+                                            <a class="waves-effect waves-light btn " data-bind="click: $parent.addToCart">agregar</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-action" data-bind="visible: disponible ==  false">
+                                    <span>No disponible</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </li>
                 <!--seccion Botana-->
@@ -133,14 +266,15 @@
                 </li>
                 
             </ul>
-		</section><div class="fixed-action-btn">
+		</section>
+        <div class="fixed-action-btn">
             <a class="btn-floating btn-large green modal-trigger" href="#modal1">
                 <i class="large material-icons">add_shopping_cart</i>
             </a>  
         </div>
 	</main>
 
-    <!-- Modal Structure -->
+    <!-- Modal orden -->
     <div id="modal1" class="modal">
         <div class="modal-content">
             <h4>Tu Orden</h4> <h6 data-bind="text: 'Total: $' + total" class="right-align"></h6>
@@ -153,9 +287,23 @@
                   <a href="#!" class="secondary-content" data-bind="click: $parent.removeToCard"><i class="material-icons">close</i></a>
                 </li>
             </ul>
+            <small class="leyenda">*Costo de envío $30.00</small>
         </div>
         <div class="modal-footer">
-            <a href="https://wa.me/524444894855" class="modal-close waves-effect waves-green btn">Enviar Orden</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn red">Cerrar</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn" data-bind="click: confirmaOrden">Enviar Orden</a>
+        </div>
+    </div>
+
+    <!-- Modal confirma -->
+    <div id="confirmacion" class="modal">
+        <div class="modal-content">
+            <h4>Confirma</h4>
+            <p>Por favor confirma tu orden con un costo total de $<span data-bind="text: total"></span></p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-light btn red">Cancelar</a>
+            <a data-bind="attr: { href: 'https://wa.me/524444894855?text=' + mensaje }" class="modal-close waves-effect waves-green btn">Enviar Orden</a>
         </div>
     </div>
 
