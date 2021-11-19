@@ -1,0 +1,34 @@
+{
+    "name" : "Los Gordos Beer",
+    "short_name": "Los Gordos",
+    "description": "Servio de envio de Cerveza, Pomos, etc.",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+        {
+          "src": "./img/icono_1050.png",
+          "sizes": "1050x1050",
+          "type": "image/png"
+        },
+        {
+          "src": "./img/icono_500.png",
+          "sizes": "500x500",
+          "type": "image/png"
+        },
+        {
+          "src": "./img/icono_250.png",
+          "sizes": "250x250",
+          "type": "image/png"
+        },
+        {
+          "src": "./img/icono_750.png",
+          "sizes": "750x750",
+          "type": "image/png"
+        }
+    ]
+}
