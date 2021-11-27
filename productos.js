@@ -221,7 +221,7 @@ const refrescos = [
         "nombre": "Squirt Toronja",
         "descripcion": "Refresco de 2.5 lts",
         "precio": 30,
-        "imagen": "imagen",
+        "imagen": "squirt.png",
         "disponible": true,
         "cantidad" : 1
     },
@@ -237,7 +237,7 @@ const refrescos = [
         "nombre": "Coca Cola",
         "descripcion": "Refresco de 2.5 lts",
         "precio": 40,
-        "imagen": "squirt.png",
+        "imagen": "coca-cola-2l.jpg",
         "disponible": true,
         "cantidad" : 1
     }
