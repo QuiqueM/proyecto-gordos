@@ -12,7 +12,7 @@ const tequila = [
         "descripcion": "Tequila Cristalino 710 ml",
         "precio": 900,
         "imagen": "don-julio-70.jpg",
-        "disponible": true,
+        "disponible": false,
         "cantidad" : 1
     },
     {
@@ -43,7 +43,7 @@ const tequila = [
 
 const cerveza = [
     {
-        "nombre": "Corona Extra Lata",
+        "nombre": "Six Corona Extra Lata",
         "descripcion" : "Six de lata 355 ml",
         "precio": 110,
         "imagen": "c-extra.jpg",
@@ -51,7 +51,7 @@ const cerveza = [
         "cantidad" : 1
     },
     {
-        "nombre": "Corona Light Lata",
+        "nombre": "Six Corona Light Lata",
         "descripcion" : "Six de lata 355 ml",
         "precio": 110,
         "imagen": "c-light.jpg",
@@ -59,7 +59,7 @@ const cerveza = [
         "cantidad" : 1
     },
     {
-        "nombre": "Modelo Lata",
+        "nombre": "Six Modelo Lata",
         "descripcion" : "Six de lata 355 ml",
         "precio" : 120,
         "imagen": "modelo-355.jpg",
@@ -168,7 +168,7 @@ const brandy = [
         "descripcion": "Torres 700 ml incluye un vaso",
         "precio": 360,
         "imagen": "torres-10-vaso.jpg",
-        "disponible": true,
+        "disponible": false,
         "cantidad" : 1
     },
     {
@@ -229,7 +229,7 @@ const refrescos = [
         "nombre": "Agua Mineral",
         "descripcion": "Agua de Lurdes 2 lts",
         "precio": 30,
-        "imagen": "imagen",
+        "imagen": "agua-lurdes.png",
         "disponible": true,
         "cantidad" : 1
     },
@@ -237,7 +237,7 @@ const refrescos = [
         "nombre": "Coca Cola",
         "descripcion": "Refresco de 2.5 lts",
         "precio": 40,
-        "imagen": "imagen",
+        "imagen": "squirt.png",
         "disponible": true,
         "cantidad" : 1
     }
